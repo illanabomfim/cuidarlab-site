@@ -1,0 +1,68 @@
+{
+  "version": 2,
+  "name": "cuidarlab",
+  "buildCommand": "node scripts/build.js",
+  "outputDirectory": "dist",
+  "installCommand": "npm install",
+  "routes": [
+    {
+      "src": "/admin",
+      "dest": "/admin/index.html"
+    },
+    {
+      "src": "/admin/(.*)",
+      "dest": "/admin/$1"
+    },
+    {
+      "src": "/api/auth",
+      "dest": "/api/auth.js"
+    },
+    {
+      "src": "/blog",
+      "dest": "/blog/index.html"
+    },
+    {
+      "src": "/blog/([^/]+)",
+      "dest": "/blog/$1.html"
+    },
+    {
+      "src": "/publicacoes",
+      "dest": "/publicacoes/index.html"
+    },
+    {
+      "src": "/publicacoes/([^/]+)",
+      "dest": "/publicacoes/$1.html"
+    },
+    {
+      "src": "/podcasts",
+      "dest": "/podcasts/index.html"
+    },
+    {
+      "src": "/podcasts/([^/]+)",
+      "dest": "/podcasts/$1.html"
+    },
+    {
+      "src": "/(.*)\\.html",
+      "dest": "/$1.html"
+    },
+    {
+      "src": "/",
+      "dest": "/index.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/admin/(.*)",
+      "headers": [
+        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
+        { "key": "X-Content-Type-Options", "value": "nosniff" }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Robots-Tag", "value": "index, follow" }
+      ]
+    }
+  ]
+}

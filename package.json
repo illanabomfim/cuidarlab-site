@@ -1,0 +1,28 @@
+{
+  "name": "cuidarlab",
+  "version": "1.0.0",
+  "description": "CuidarLab — Laboratório de Tecnologias de Cuidados Sociais · UFBA",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "dev": "node scripts/dev-server.js",
+    "start": "node scripts/dev-server.js"
+  },
+  "dependencies": {
+    "front-matter": "^4.0.2",
+    "marked": "^9.1.6",
+    "gray-matter": "^4.0.3",
+    "chokidar": "^3.5.3",
+    "http-server": "^14.1.1"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "cuidarlab",
+    "ufba",
+    "cuidados-sociais",
+    "tecnologia-social"
+  ],
+  "author": "CuidarLab · UFBA",
+  "license": "MIT"
+}
